@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>propfull_petapoco</Title>
+      <Shortcut>propfull_petapoco</Shortcut>
+      <Description>自动生成 PetaPoco 数据库映射的属性</Description>
+      <Author>何群民</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>字段和属性的类型</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>属性名</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <ToolTip>私有字段名</ToolTip>
+          <Default>myField</Default>
+        </Literal>
+        <Literal>
+          <ID>columnName</ID>
+          <ToolTip>数据库列名</ToolTip>
+          <Default>mycolumn</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private $type$ $field$;
+        [Column(Name = "$columnName$")]
+        public $type$ $property$
+        {
+            get { return $field$; }
+            set { $field$ = value; }
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
