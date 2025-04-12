@@ -1,0 +1,18 @@
+# git ignore file
+
+/.vs
+/packages
+/library
+
+/HRPro/.vs
+/HRPro/bin
+/HRPro/obj
+
+/HR.Core/bin
+/HR.Core/obj
+/HR.Forms/.vs
+/HR.Forms/bin
+/HR.Forms/obj
+
+
+
